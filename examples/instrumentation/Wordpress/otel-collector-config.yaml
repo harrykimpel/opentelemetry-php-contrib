@@ -18,7 +18,10 @@ exporters:
   debug:
     verbosity: detailed
   otlp:
+    # US region
     endpoint: https://otlp.nr-data.net:4317
+    # EU region
+    #endpoint: https://otlp.eu01.nr-data.net:4317
     headers:
       api-key: NEW_RELIC_LICENSE_KEY
     sending_queue:
