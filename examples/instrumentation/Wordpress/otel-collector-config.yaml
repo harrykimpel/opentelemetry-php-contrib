@@ -9,6 +9,9 @@ receivers:
   #  limit_percentage: 65
   #  spike_limit_percentage: 20
 
+processors:
+  batch:
+
 # Alternatively, add additional exporters for the backend of your choice and update the
 # pipelines below
 exporters:
@@ -25,10 +28,10 @@ service:
   pipelines:
     metrics:
       receivers: [otlp]
-      processors: [memory_limiter]
+      processors: [batch]
       exporters: [debug]
 
     traces:
       receivers: [otlp]
-      processors: [memory_limiter]
+      processors: [batch]
       exporters: [debug, otlp]
