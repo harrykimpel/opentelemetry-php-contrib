@@ -4,10 +4,10 @@ receivers:
       http:
         endpoint: 0.0.0.0:4318
 
-  memory_limiter:
-    check_interval: 1s
-    limit_percentage: 65
-    spike_limit_percentage: 20
+  #memory_limiter:
+  #  check_interval: 1s
+  #  limit_percentage: 65
+  #  spike_limit_percentage: 20
 
 # Alternatively, add additional exporters for the backend of your choice and update the
 # pipelines below
