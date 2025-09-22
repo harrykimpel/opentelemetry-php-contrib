@@ -15,11 +15,11 @@ exporters:
   debug:
     verbosity: detailed
   otlp:
-    endpoint: jaeger:4317
+    endpoint: https://otlp.nr-data.net:4317
+    headers:
+      api-key: NEW_RELIC_LICENSE_KEY
     sending_queue:
       batch:
-    tls:
-      insecure: true
 
 service:
   pipelines:
