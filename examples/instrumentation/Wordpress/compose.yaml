@@ -6,6 +6,7 @@ services:
     command: '--default-authentication-plugin=mysql_native_password'
     volumes:
       - db_data:/var/lib/mysql
+      - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=somewordpress
